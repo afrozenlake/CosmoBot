@@ -107,8 +107,8 @@ class Afk(commands.Cog):
     afk_group = app_commands.Group(name="afk", description="Set your AFK status.")
 
     @afk_group.command(name="response", description="Set your custom AFK response embed")
-    @app_commands.describe(action = "Wheter you want to set or view your afk response embed")
-    @app_commands.choices(action = [app_commands.Choice(name="Set", value='Set'), app_commands.Choice(name="View", value='View')])
+    @app_commands.describe(action="Whether you want to set or view your afk response embed")
+    @app_commands.choices(action=[app_commands.Choice(name="Set", value='Set'), app_commands.Choice(name="View", value='View')])
     async def afkembed(self, ctx: discord.Interaction, action: str):
 
         if action == "Set":
